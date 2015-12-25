@@ -1,0 +1,119 @@
+<meta charset="utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<body style="background-image:url(http://b.hiphotos.baidu.com/image/pic/item/6609c93d70cf3bc7ee9eb0c8d600baa1cd112a73.jpg);background-position:center; background-repeat:repeat-y">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<title id="topic">Merry Christmas!</title>
+<audio src="song.mp3" autoplay></audio>
+<script>
+setInterval(function () {
+x1();
+},500)	;
+}
+</script>
+<script>
+var x=1;
+$(function(){ 
+a1();
+}); 
+function a1() {
+alert("马上就是\n十二月二十五了……")
+setTimeout(function () {
+a2();
+},1000)	;
+}
+function a2() {
+alert("那是圣诞")
+setTimeout(function () {
+a3();
+},1000)	;
+}
+function a3() {
+alert("一个盛大的节日")
+setTimeout(function () {
+a4();
+},1000)	;
+}
+function a4() {
+alert("今天，我们在这里欢庆这个伟大的节日")
+setTimeout(function () {
+a5();
+},1000)	;
+}
+function a5() {
+alert("它带给了我们每一个人欢乐与喜庆")
+setTimeout(function () {
+a6();
+},1000)	;
+}
+function a6() {
+alert("今年，感谢有你")
+setTimeout(function () {
+a7();
+},1000)	;
+}
+function a7() {
+alert("来年，与你同行")
+setTimeout(function () {
+a8();
+},1000)	;
+}
+function a8() {
+alert("Merry Christmas!")
+setTimeout(function () {
+a9();
+},1000)	;
+}
+function a9() {
+alert("And I'll see you next year!")
+setTimeout(function () {
+a10();
+},1000)	;
+}
+function a10() {
+alert("This website was created\n by Eric Liu's amazing coding skill XD\n, all right serve. \nAlso, this site will close in less than 10 sec.")
+setTimeout(function () {
+a11();
+},5000)	;
+}
+function a11() {
+alert("No I just messing with you, happy new year!")
+}
+</script>
+    <script type="text/javascript">    
+        // 使用message对象封装消息    
+        var message = {    
+            time: 0,    
+            title: document.title,    
+            timer: null,    
+            // 显示新消息提示    
+            show: function () {    
+                var title = message.title.replace("【　　　】", "").replace("【新消息】", "");    
+                // 定时器，设置消息切换频率闪烁效果就此产生    
+                message.timer = setTimeout(function () {    
+                    message.time++;    
+                    message.show();    
+                    if (message.time % 2 == 0) {    
+                        document.title = "Marry Christmas!"
+                    }    
+  
+                    else {    
+                        document.title = "Happy new year!"  
+                    };    
+                }, 600);    
+                return [message.timer, message.title];    
+            },    
+            // 取消新消息提示    
+            clear: function () {    
+                clearTimeout(message.timer);    
+                document.title = message.title;    
+            }    
+        };    
+        message.show();    
+        // 页面加载时绑定点击事件，单击取消闪烁提示    
+        function bind() {    
+            document.onclick = function () {    
+                message.clear();    
+            };    
+        }    
+    </script>  
+</body>
